@@ -1,0 +1,163 @@
+@import url(reset.css);
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #e0e0e0;
+}
+
+body {
+    background: linear-gradient(to bottom, #1c1c1c 26%, #25242c 43%, #2e2c3c 58%);
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh; /* Asegura que el body tenga al menos la altura de la vista */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container1 {
+    margin-top: 5em;
+    margin-bottom: 3em;
+    text-align: center;
+    font-size: 180%;
+}
+
+/* Ajustar tamaño de visitas */
+#visitas {
+    font-size: 250%;    
+}
+
+footer {
+    text-align: center;
+    font-size: 135%;
+    padding-bottom: 3em; /* Cambiado para mejorar el espaciado */
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.autor {
+    margin-top: 14px;
+}
+
+.social {
+    margin-top: 1em;
+}
+
+.social-container {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.link-social {
+    margin-left: 14px;
+}
+
+.logo-social {
+    width: 50px;
+    height: 50px;
+    transition: transform 2s;
+    cursor: pointer;
+}
+
+.link-social:hover {
+    transform: scale(1.2);
+}
+
+.contacto {
+    margin-top: 2em;
+}
+
+#contacto {
+    color: #e0e0e0;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1c1c1c;
+    transition: background-color 1s, transform 1s;
+    cursor: pointer;
+}
+
+#contacto:hover {
+    transform: scale(1.2);
+    background-color: #25242c;
+}
+
+/* Media queries para diseño responsivo */
+@media (max-width: 768px) {
+    #container1 {
+        font-size: 150%;
+    }
+
+    footer {
+        font-size: 120%;
+    }
+
+    .logo-social {
+        width: 40px;
+        height: 40px;
+    }
+
+    #contacto {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    body {
+        padding-bottom: 10%;
+    }
+
+    #container1 {
+        margin-top: 3em;
+        margin-bottom: 2em;
+        text-align: center;
+        font-size: 160%;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    #container1 h1 {
+        font-size: 130%;
+        margin-bottom: 0.5em;
+    }
+
+    #container1 span {
+        display: block;
+        font-size: 150%;
+        margin-top: 0.5em;
+    }
+
+    footer {
+        font-size: 120%;
+        padding-bottom: 1em;
+    }
+
+    .autor {
+        margin-top: 10px;
+    }
+
+    .social {
+        margin-top: 1em;
+    }
+
+    .logo-social {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contacto {
+        margin-top: 2em;
+        text-align: center;
+    }
+
+    #contacto {
+        font-size: 18px;
+        padding: 10px 14px;
+        border-radius: 8px;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="es-419">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes"/> <!--El 'user-scalable' es para que el usuario pueda hacer zoom en pantallas portátiles, si el valor es 'no', entonces no podrá hacer zoom. Para que los parámetros funcionen, el valor de 'maximum-scale' tiene que ser mayor a 1, o sino, directamente no colocarlos.-->
+        <meta name="autor"
+        <meta name="description" content="Un ejemplo sencillo de fragmentos de código para generar un contador de visitas y un actualizador automático del año o fecha en curso"/>
+        <meta name="robots" content="index,follow" />
+        <meta property="og:title" content="Contador de visitas" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://github.com/MarianoMaldonado-dev" />
+        <meta property="og:description" content="Un ejemplo sencillo de fragmentos de código para generar un contador de visitas y un actualizador automático del año o fecha en curso"/>
+        <meta name="twitter:card" content="summary" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        
+        <!-- Google tag (gtag.js) 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGLNTZ84LE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-VGLNTZ84LE');
+
+            Ésta es otra manera de implementar el contador de visitas usando un servicio externo, en este caso de Google Analitycs.
+        </script>-->
+
+        <title>Contador de visitas y actualizador automático de año</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+    <body>
+        <main>
+            <div id="container1">
+                <h1>Gracias por visitar mi página. Usted es el visitante N° <span id="visitas"></span></h1>
+            </div>
+            <!--<a href='http://www.freevisitorcounters.com'>on Freevisitorcounters.com</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=134eda741594c048c7aa6a6b68d1e381fa3affde'></script>
+                    <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1220452/t/13"></script>
+            <a href="https://www.freecounterstat.com" title="counter widget"><img src="https://counter2.optistats.ovh/private/freecounterstat.php?c=xq3hlc4dqpj1aa3bbcegj3k5x6qappu8" border="0" title="counter widget" alt="counter widget"></a>--><!--Esta sección se utiliza para un servicio de contador externo que funciona realmente. El único problema es que no se le puede cambiar el tamaño, por éste motivo lo desactivé y dejé únicamente el LocalStorage-->
+        </main>
+        <script src="scripts/visit_counter.js"></script>
+        <footer>
+            <div id="container2">
+                <p class="copyright">&copy; Copyright &#124; <a href="https://www.instagram.com/marianomaldonado.dev/" class="dev-code">&#123; DEV&#60;&#47;&#62;CODE &#125; &#174;</a> &#124; <span id="current-year"></span></p>
+                <p class="autor">Creado por <a href="https://github.com/MarianoMaldonado-dev" id="gitlink">Mariano Maldonado</a></p>
+                <section class="social">
+                    <ul class="social-container">
+                        <li class="links"><a href="https://www.linkedin.com/in/mariano-maldonado-810847288" class="link-social"><img src="img/dark-circlesociallinkedin.svg" alt="LinkedIn-logo" class="logo-social"></a></li>
+    
+                        <li class="links"><a href="https://www.instagram.com/marianomaldonado.dev/" class="link-social"><img src="img/dark-circlesocialinstagram.svg" alt="Instagram-logo" class="logo-social"></a></li>
+    
+                        <li class="links"><a href="https://github.com/MarianoMaldonado-dev" class="link-social"><img src="img/dark-circlesocialgithub.svg" alt="GitHub-logo" class="logo-social"></a></li>
+                    </ul>
+                </section>
+                <section class="contacto">
+                    <a href="https://github.com/MarianoMaldonado-dev"><button id="contacto">CONTACTAME AHORA</button></a>
+                </section>
+            </div>
+            <script src="scripts/update_year.js"></script>
+            <!--Para que funcione, el script debe ser colocado antes de la etiqueta de cierre así cuando cargue el DOM, el script sea lo último en cargarse-->
+        </footer>
+    </body>
+</html>
